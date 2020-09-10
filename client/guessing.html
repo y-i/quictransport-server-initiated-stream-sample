@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<title>QuicTransport client</title>
+<meta charset="utf-8">
+<!-- QuicTransport origin trial token. See https://developers.chrome.com/origintrials/#/view_trial/-6744140441987317759 -->
+<meta http-equiv="origin-trial"
+  content="ArtkN97mJqfXksdatZVU03RsShP5QxBG++svMEvtiZxuymzUN0CxlMaiFt076/++dkidzfiHTw7lL2u7p7uB5AAAAABdeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZWNocm9tZS5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IlF1aWNUcmFuc3BvcnQiLCJleHBpcnkiOjE1OTc4NDg3NTN9">
+<script src="guessing.js"></script>
+<link rel="stylesheet" href="https://googlechrome.github.io/samples/quictransport/client.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+  <div id="top">
+    <div id="tool">
+      <h1>QuicTransport client</h1>
+      <div>
+        <h2>Establish QuicTransport connection</h2>
+        <div class="input-line">
+          <label for="url">URL:</label>
+          <input type="text" name="url" id="url" value="quic-transport://localhost:4433/guessing">
+          <input type="button" id="connect" value="Connect" onclick="connect()">
+        </div>
+      </div>
+      <div>
+          <h2>Send data over Bidirectioal Stream created by server</h2>
+          <label for="number">Guess</label>
+          <input type="number" id="number">
+          <button id="send" onclick="sendNumber()" disabled>Send</button>
+      </div>
+      <div>
+        <h2>Event log</h2>
+        <ul id="event-log">
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
